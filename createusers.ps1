@@ -16,22 +16,19 @@ foreach ($user in $csv) {
         Name = $user.Name
         DisplayName = $user.Name
         GivenName = $user.GivenName
-        Surname = $user.Surname
-        
+        Surname = $user.Surname        
         SamAccountName = $user.SamAccountName
         Path = $user.Path
-
         Title = $user.Title
         Department = $user.Department
         Company = $user.Company
-        EmailAddress = $user.EmailAddress
-        
+        EmailAddress = $user.EmailAddress        
         AccountPassword = $Accountpassword
         ChangePasswordAtLogon = $true    
         Enabled = $true
     }
 
     # Create New Users
-    New-ADUser @UserInfo 
+    New-ADUser @UserInfo
     
 }
